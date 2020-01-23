@@ -1,0 +1,4 @@
+[run]
+include = inte_prn/*
+omit = inte_prn/tests/*
+branch = 1
