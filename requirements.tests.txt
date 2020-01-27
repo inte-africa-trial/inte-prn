@@ -1,0 +1,12 @@
+faker
+model-mommy
+inte-ae
+edc-reportable
+edc-subject-dashboard
+inte-dashboard
+inte-reports
+inte-lists
+inte_labs
+inte_sites
+inte_visit_schedule
+inte_form_validators

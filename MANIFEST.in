@@ -1,0 +1,6 @@
+include AUTHORS CHANGES LICENSE VERSION
+include MANIFEST.in
+include *.rst
+include *.txt
+recursive-include inte_prn/templates *
+recursive-include inte_prn/static *
