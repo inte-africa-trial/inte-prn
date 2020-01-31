@@ -3,11 +3,11 @@ from django.contrib.sites.shortcuts import get_current_site
 from edc_auth.admin import UserAdmin as BaseUserAdmin
 from edc_auth import UNBLINDING_REQUESTORS, UNBLINDING_REVIEWERS
 
-from ..admin_site import meta_prn_admin
+from ..admin_site import inte_prn_admin
 from ..models import UnblindingRequestorUser, UnblindingReviewerUser
 
 
-@register(UnblindingRequestorUser, site=meta_prn_admin)
+@register(UnblindingRequestorUser, site=inte_prn_admin)
 class UnblindingRequestorUserAdmin(BaseUserAdmin):
     ordering = ("first_name", "last_name")
     search_fields = ("first_name", "last_name", "username", "email")
@@ -24,7 +24,7 @@ class UnblindingRequestorUserAdmin(BaseUserAdmin):
         return super().get_queryset(request).filter(**opts)
 
 
-@register(UnblindingReviewerUser, site=meta_prn_admin)
+@register(UnblindingReviewerUser, site=inte_prn_admin)
 class UnblindingReviewerUserAdmin(BaseUserAdmin):
     ordering = ("first_name", "last_name")
     search_fields = ("first_name", "last_name", "username", "email")
