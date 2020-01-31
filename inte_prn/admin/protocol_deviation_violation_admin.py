@@ -60,8 +60,7 @@ class ProtocolDeviationViolationAdmin(
                 )
             },
         ),
-        ("Report status", {
-         "fields": ("report_status", "report_closed_datetime")}),
+        ("Report status", {"fields": ("report_status", "report_closed_datetime")}),
         action_fieldset_tuple,
         audit_fieldset_tuple,
     )
