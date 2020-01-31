@@ -4,12 +4,12 @@ from edc_action_item import action_fieldset_tuple, action_fields
 from edc_model_admin import audit_fieldset_tuple, SimpleHistoryAdmin
 from edc_model_admin.dashboard import ModelAdminSubjectDashboardMixin
 
-from ..admin_site import meta_prn_admin
+from ..admin_site import inte_prn_admin
 from ..forms import EndOfStudyForm
 from ..models import EndOfStudy
 
 
-@admin.register(EndOfStudy, site=meta_prn_admin)
+@admin.register(EndOfStudy, site=inte_prn_admin)
 class EndOfStudyAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin):
 
     form = EndOfStudyForm
@@ -48,7 +48,8 @@ class EndOfStudyAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin):
 
     radio_fields = {"offschedule_reason": admin.VERTICAL}
 
-    search_fields = ("subject_identifier", "action_identifier", "tracking_identifier")
+    search_fields = ("subject_identifier",
+                     "action_identifier", "tracking_identifier")
 
     def get_readonly_fields(self, request, obj=None):
         fields = super().get_readonly_fields(request, obj)

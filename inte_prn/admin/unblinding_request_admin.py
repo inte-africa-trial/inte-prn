@@ -4,12 +4,12 @@ from edc_action_item import action_fieldset_tuple, action_fields
 from edc_model_admin import audit_fieldset_tuple, SimpleHistoryAdmin
 from edc_model_admin.dashboard import ModelAdminSubjectDashboardMixin
 
-from ..admin_site import meta_prn_admin
+from ..admin_site import inte_prn_admin
 from ..forms import UnblindingRequestForm
 from ..models import UnblindingRequest
 
 
-@admin.register(UnblindingRequest, site=meta_prn_admin)
+@admin.register(UnblindingRequest, site=inte_prn_admin)
 class UnblindingRequestAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin):
 
     form = UnblindingRequestForm

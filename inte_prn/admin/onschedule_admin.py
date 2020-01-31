@@ -2,11 +2,11 @@ from django.contrib import admin
 from edc_model_admin import SimpleHistoryAdmin
 from edc_model_admin.dashboard import ModelAdminSubjectDashboardMixin
 
-from ..admin_site import meta_prn_admin
+from ..admin_site import inte_prn_admin
 from ..models import OnSchedule
 
 
-@admin.register(OnSchedule, site=meta_prn_admin)
+@admin.register(OnSchedule, site=inte_prn_admin)
 class OnScheduleAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin):
 
     instructions = None

@@ -6,7 +6,7 @@ from edc_identifier.model_mixins import TrackingModelMixin
 from edc_model.models import BaseUuidModel
 from edc_model.validators.date import datetime_not_future, date_not_future
 from edc_visit_schedule.model_mixins import OffScheduleModelMixin
-from meta_lists.models import OffstudyReasons
+from inte_lists.models import OffstudyReasons
 
 from ..constants import END_OF_STUDY_ACTION
 
