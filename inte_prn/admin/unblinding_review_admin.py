@@ -14,8 +14,7 @@ class UnblindingReviewAdmin(ModelAdminSubjectDashboardMixin, SimpleHistoryAdmin)
     form = UnblindingReviewForm
 
     fieldsets = (
-        ("Request", {"fields": ("subject_identifier",
-                                "report_datetime", "reviewer")}),
+        ("Request", {"fields": ("subject_identifier", "report_datetime", "reviewer")}),
         ("Approval", {"fields": ("approved", "comment")}),
         action_fieldset_tuple,
         audit_fieldset_tuple,
